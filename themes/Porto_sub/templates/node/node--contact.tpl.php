@@ -72,7 +72,7 @@
 		markers: mapMarkers,
 		latitude: initLatitude,
 		longitude: initLongitude,
-		zoom: 16
+		zoom: 17
 	};
 
 	var map = $("#googlemaps").gMap(mapSettings);
