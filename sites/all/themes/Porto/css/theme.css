@@ -299,11 +299,38 @@ body {
 }
 
 /* Logo */
+
+.topsearch {
+	text-align: right;
+	vertical-align: text-top;
+	font-size: 0.8em;
+	letter-spacing: -0.03em;
+}
+
+.region-branding {
+	position: relative;
+	max-width: 300pt;
+	float: left;
+	margin-left: 0pt;
+	margin-top: 0pt;
+	margin-bottom: 5pt;
+	margin-right: 0pt;
+	vertical-align: top;
+
+}
+
+.logospan {
+	position: absolute;
+	top: 25pt;
+	left: 70pt;
+}
+
 #header .logo {
 	-webkit-transition: all 0.2s ease-in 0.2s;
 	-moz-transition: all 0.2s ease-in 0.2s;
 	transition: all 0.2s ease-in 0.2s;
-	margin: 0;
+	margin: 0pt;
+	float: left;
 	padding: 5px 0;
 	display: table-cell;
 	vertical-align: middle;
