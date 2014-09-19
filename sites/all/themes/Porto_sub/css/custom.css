@@ -1,13 +1,18 @@
 /*=======================================================================
 *** PORTO_SUB STYLE SHEET***
 ========================================================================*/
+ul {
+	list-style: none;
+}
+/* Footer */
 
 footer h2 {
 	margin-top: 15px;
 }
 
+/* Home Page Newscards View */
+
 .newsviewbox {
-	float: right;
 	padding-right: 0px;
 }
 
@@ -24,10 +29,6 @@ footer h2 {
 	margin: 0px 0px 7px 0px;
 }
 
-ul {
-	list-style: none;
-}
-
 .newspic {
 	max-height: 120px;
 	width: 198px;
@@ -37,15 +38,15 @@ ul {
 	margin-bottom: 2pt;
 }
 
+.newstitle {
+	padding: 0pt 0pt 0pt 0pt;
+}
+
 .newsdate {
 	font-size: 80%;
 	font-style: italic;
 	color: lightgray;
 	padding: 0pt 5pt 5pt 5pt;
-}
-
-.newstitle {
-	padding: 5pt 5pt 4pt 5pt;
 }
 
 .col-lg-6 {
@@ -54,5 +55,34 @@ padding: 0px;
 
 }
 
+/* Home Page Upcoming Events View */
 
+
+
+
+.eventspic {
+	width: 100px;
+	overflow: hidden;
+	vertical-align: middle;
+	padding: 5pt;
+	border-radius: 4px 4px 4px 4px;
+}
+
+
+.views-field-title {
+	padding: 5pt 5pt 4pt 5pt;
+}
+
+.views-field-field_location_name {
+	font-size: 80%;
+	font-style: italic;
+	color: lightgray;
+	padding: 0pt 5pt 5pt 5pt;
+}
+
+.views-field-field_eventdate {
+	font-weight: bold;
+	font-size: 80%;
+	padding-bottom: 4pt;
+}
 
