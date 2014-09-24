@@ -38,9 +38,7 @@ footer h2 {
 	margin-bottom: 2pt;
 }
 
-.newstitle {
-	padding: 0pt 0pt 0pt 0pt;
-}
+
 
 .newsdate {
 	font-size: 80%;
@@ -49,40 +47,9 @@ footer h2 {
 	padding: 0pt 5pt 5pt 5pt;
 }
 
-.col-lg-6 {
-width: 210px;
-padding: 0px;
-
-}
-
-/* Home Page Upcoming Events View */
 
 
-
-
-.eventspic {
-	width: 100px;
-	overflow: hidden;
-	vertical-align: middle;
-	padding: 5pt;
-	border-radius: 4px 4px 4px 4px;
-}
-
-
-.views-field-title {
-	padding: 5pt 5pt 4pt 5pt;
-}
-
-.views-field-field_location_name {
-	font-size: 80%;
-	font-style: italic;
-	color: lightgray;
-	padding: 0pt 5pt 5pt 5pt;
-}
-
-.views-field-field_eventdate {
-	font-weight: bold;
-	font-size: 80%;
-	padding-bottom: 4pt;
+.newstitle {
+	padding: 0pt 5pt 0pt 5pt;
 }
 
