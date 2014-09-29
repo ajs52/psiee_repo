@@ -8,7 +8,43 @@ ul {
 
 footer h2 {
 	margin-top: 15px;
+	}
+
+
+
+/* Home Page Latest Posts Block - which contains news and events */
+.map-section {
+	background: none;
+	padding-top: 0px;
 }
+
+section.featured.map {
+	background: none;
+}
+
+
+/* Home Page Latest Posts Block - Little Date Boxes */
+
+.date {
+	box-shadow: 1px 1px 7px #E0E0E0;
+}
+
+section.featured .recent-posts .date .day {
+	border-radius: 4px 4px 0 0;
+background: #FFF;
+border-style: solid;
+border-width: 1pt;
+border-color:#0088cc;
+padding: 7pt 3pt 7pt 3pt;
+}
+
+.recent-posts .date .month {
+padding: 3pt 13pt 2pt 13pt;
+border-style: solid;
+border-width: 1pt;
+border-color:#0088cc;
+}
+
 
 /* Home Page Newscards View */
 
