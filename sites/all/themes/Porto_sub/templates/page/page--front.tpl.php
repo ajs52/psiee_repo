@@ -4,9 +4,9 @@
  * Porto's theme implementation to display a single Drupal page.
  */
 ?>
-<body class="<?php print $classes; ?> one-page" data-target=".single-menu" data-spy="scroll" data-offset="200" <?php print $attributes;?>>
-<div id="top" class="body">
-  <header id="header" class="single-menu flat-menu">
+
+<div class="body">
+  <header id="header">
     <div class="container">
 
       <?php if (isset($page['branding'])) : ?>
@@ -14,47 +14,69 @@
 	    <?php endif; ?>
     
       <?php if ($logo): ?>
-        <h1 class="logo">
-		      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-		        <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>"  width="111" height="54" data-sticky-width="82" data-sticky-height="40" />
-		      </a>
-        </h1>
+      <h1 class="logo">
+	      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
+	        <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" height="<?php print theme_get_setting('logo_height'); ?>" data-sticky-height="<?php print theme_get_setting('sticky_logo_height'); ?>" />
+	      </a>
+      </h1>
 	    <?php endif; ?>
 	    
 	    <?php if ($site_name || $site_slogan): ?>
-	      <div id="name-and-slogan"<?php if ($disable_site_name && $disable_site_slogan) { print ' class="hidden"'; } ?>>
-	
-	        <?php if ($site_name): ?>
+      <div id="name-and-slogan"<?php if ($disable_site_name && $disable_site_slogan) { print ' class="hidden"'; } ?>>
+
+        <?php if ($site_name): ?>
+          <?php if ($title): ?>
+            <div id="site-name"<?php if ($disable_site_name) { print ' class="hidden"'; } ?>>
+	            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
+	          </div>
+          <?php else: /* Use h1 when the content title is empty */ ?>
 	          <h1 id="site-name"<?php if ($disable_site_name) { print ' class="hidden"'; } ?>>
 	            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
 	          </h1>
-	        <?php endif; ?>
-	
-	        <?php if ($site_slogan): ?>
-		          <div id="site-slogan"<?php if ( ($disable_site_slogan ) ) { print ' class="hidden"'; } if ( (!$disable_site_slogan ) AND ($disable_site_name) ) { print ' class="slogan-no-name"'; } ?>>
-		            <?php print $site_slogan; ?>
-		          </div>
-		        <?php endif; ?>
-	
-	      </div> <!-- /#name-and-slogan -->
+          <?php endif; ?>
+        <?php endif; ?>
+
+        <?php if ($site_slogan): ?>
+          <div id="site-slogan"<?php if ( ($disable_site_slogan ) ) { print ' class="hidden"'; } if ( (!$disable_site_slogan ) AND ($disable_site_name) ) { print ' class="slogan-no-name"'; } ?>>
+            <?php print $site_slogan; ?>
+          </div>
+        <?php endif; ?>
+
+      </div> <!-- /#name-and-slogan -->
+	    <?php endif; ?>
+	    
+	    <?php if (isset($page['header_search'])) : ?>
+	    <div class="search">
+	      <?php print render($page['header_search']); ?>
+	    </div>
 	    <?php endif; ?>
       
-      <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse">
-				<i class="icon icon-bars"></i>
+      <!-- /branding --> 
+      <div id="header-top">
+        <?php print render($page['header_top']); ?>
+      </div>
+      
+	    <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse">
+				<i class="fa fa-bars"></i>
 			</button>
-    </div>    
+      
+    </div>
+    
     <div class="navbar-collapse nav-main-collapse collapse">
-		  <div class="container">
-      <?php print render($page['header_top']); ?>
-      <?php print render($page['header_icons']); ?>
-      <nav class="nav-main">
-       <?php print render($page['header_menu']); ?>
-      </nav>
-		  </div>
-    </div>	  
+		  <div class="container">  
+      
+        <?php print render($page['header_icons']); ?>
+        
+        <nav class="nav-main">
+        <?php print render($page['header_menu']); ?>
+        </nav>
+        
+		  </div> 
+    </div>  
     
 	</header>
-	
+	<!-- end header --> 
+	<?php print $messages; ?>
 	<div role="main" class="main">
 	
 	  <?php if ( ($breadcrumb) AND (!drupal_is_front_page()) ): ?>
@@ -62,13 +84,13 @@
 		  <div class="container">
 		    <?php if (theme_get_setting('breadcrumbs') == '1'): ?>
 				<div class="row">
-					<div class="span12">
+					<div class="col-md-12">
 						<div id="breadcrumbs"><?php print $breadcrumb; ?> </div>	
 					</div>
 				</div>
 				<?php endif; ?>
 				<div class="row">
-					<div class="span12">
+					<div class="col-md-12">
 						<h2><?php print drupal_get_title(); ?></h2>
 					</div>
 				</div>
@@ -77,9 +99,6 @@
 	  <?php endif; ?>
 	  
 	  <?php print render($page['before_content']); ?>
-	  
-	  <?php print render($page['one_page']); ?>
-	  
 	  <div id="content" class="content full">
 	    <div class="container">
 	      <div class="row">
@@ -121,7 +140,7 @@
 			  </div>
 	    </div>  
 	  </div>  
-	  	  
+	  
 	</div>
 
   <?php print render($page['after_content']); ?>
@@ -184,25 +203,5 @@
 	    </div>
 	  </div>  
 	</footer>
-<script type="text/javascript">
-jQuery(document).ready(function ($) {
-
-  $('header .nav-main li').removeClass("active");
-	$('header .nav-main li:first-child').addClass("active");
 	
-	$("header .nav-main li a").click(function(){
-    $("header .nav-main li a").parent().removeClass("active");
-    $(this).parent().addClass("active");
-  });
-	
-	$('header a').click(function(){
-	    $('html, body').animate({
-	        scrollTop: $(this.hash).offset().top -200
-	    }, 800);
-	    return false;
-	});
-	
-});
-</script>	
 </div>	
-</body>
