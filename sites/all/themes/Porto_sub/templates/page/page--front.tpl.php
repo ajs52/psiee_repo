@@ -79,18 +79,19 @@
 	<?php print $messages; ?>
 	<div role="main" class="main">
 	
+
 	  <?php if ( ($breadcrumb) AND (!drupal_is_front_page()) ): ?>
 	  <section class="page-top breadcrumb-wrap">
 		  <div class="container">
 		    <?php if (theme_get_setting('breadcrumbs') == '1'): ?>
 				<div class="row">
-					<div class="col-md-12">
+					<div class="span12">
 						<div id="breadcrumbs"><?php print $breadcrumb; ?> </div>	
 					</div>
 				</div>
 				<?php endif; ?>
 				<div class="row">
-					<div class="col-md-12">
+					<div class="span12">
 						<h2><?php print drupal_get_title(); ?></h2>
 					</div>
 				</div>

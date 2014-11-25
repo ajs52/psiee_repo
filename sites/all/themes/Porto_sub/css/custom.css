@@ -11,6 +11,10 @@ footer h2 {
 	}
 
 
+/* Home Page padding between items like the map we aren't using */
+section.featured {
+	padding: 0;
+}
 
 /* Home Page Latest Posts Block - which contains news and events */
 .map-section {
