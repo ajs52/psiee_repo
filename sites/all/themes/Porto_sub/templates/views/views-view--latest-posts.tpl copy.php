@@ -89,12 +89,12 @@
 					</div>
 					
 				</div><!-- end col-md-6 -->
+				
 				<?php if ($footer): ?>
 				<div class="col-md-6">
 				  <?php print $footer; ?>
 				</div>
 				<?php endif; ?>
-				
 				
 			</div>
 		</div>
