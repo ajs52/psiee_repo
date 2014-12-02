@@ -28,7 +28,7 @@
  */
 ?>
 <div class="map-section">
-	<section class="featured footer map">
+	
 		<div class="container">
 			<div class="row">
 			
@@ -98,5 +98,5 @@
 				
 			</div>
 		</div>
-  </section>
-</div> 
+
+  </div>
