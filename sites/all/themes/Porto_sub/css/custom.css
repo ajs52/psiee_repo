@@ -26,6 +26,12 @@ section.featured.map {
 	background: none;
 }
 
+.owl-controls.clickable {
+	display: inline;
+}
+
+
+
 
 /* Home Page Latest Posts Block - Little Date Boxes */
 
@@ -54,7 +60,7 @@ border-color:#0088cc;
 
 .newsviewbox {
 	padding-right: 0px;
-	padding-bottom: 50px;
+	padding-bottom: 70px;
 }
 
 .newsrow {
@@ -92,5 +98,26 @@ border-color:#0088cc;
 
 .newstitle {
 	padding: 0pt 5pt 0pt 5pt;
+}
+
+
+
+/* Home Page Events and news links block */
+
+.eventlinks {
+	font-size: 110%;
+	margin-top: 50pt;
+	margin-bottom: 40pt;
+	padding: 10px;
+	border-radius: 3px;
+	background-color: #ededed;
+}
+
+
+/* Home Page Research Theme Node */
+
+.themesbox {
+	position: relative;
+	top: -30pt;
 }
 
