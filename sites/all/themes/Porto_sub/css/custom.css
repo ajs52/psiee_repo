@@ -142,3 +142,58 @@ tbody {
 .newsbutton {
 	margin-top: 5px;
 }
+
+.rd_view {
+	border-radius: 2px;
+}
+
+
+/* Researcher Nodes */
+
+.researcherphoto {
+	float: left;
+	padding-right: 8px;
+}
+
+.researcherphoto img {
+	max-width: 200px;
+	height:auto;
+	border-radius: 3px;
+	padding: 4px;
+	line-height: 1.42857143;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	margin-bottom: 15pt;
+}
+
+.researchertitles {
+	font-size: 1.1em;
+	font-weight: 300;
+	line-height: 20pt;
+	margin: 0 0 20pt 0;
+	color: #000;
+}
+
+.researchercollege {
+	font-size: 1.3em;
+	text-transform: uppercase;
+	line-height: 20pt;
+	margin: 0 0 20pt 0;
+	color: #000;
+	background: #E5E5E5;
+	border-radius: 0px 3px 3px 0px;
+}
+
+.researchercontact {
+	margin: 0 10pt 15pt 0;
+}
+
+.researchertheme {
+	line-height: 25pt;
+	padding: 3pt 10pt 3pt 10pt;
+	background: #E5E5E5;
+	border-radius: 3px 3px 3px 3px;
+	float: center;
+	margin-bottom: 10pt;
+;
+}
