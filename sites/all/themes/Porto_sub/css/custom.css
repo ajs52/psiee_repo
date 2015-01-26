@@ -195,5 +195,14 @@ tbody {
 	border-radius: 3px 3px 3px 3px;
 	float: center;
 	margin-bottom: 10pt;
-;
+}
+
+.researchertags {
+	line-height: 15pt;
+	padding: 3pt 10pt 3pt 10pt;
+	background: #ebf8ff;
+	border-radius: 3px 3px 3px 3px;
+	float: center;
+	margin-bottom: 10pt;
+	color: #0088cc;
 }
