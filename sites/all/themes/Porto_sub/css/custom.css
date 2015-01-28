@@ -30,8 +30,28 @@ section.featured.map {
 	display: inline;
 }
 
+table {
+	margin-left: 10px;
+	border-left: 1pt;
+}
+td, th {
+	padding: 12px;
+}
 
+tbody {
+  border-top: 0px;
+  border-left-width: 1pt;
+  border-left-style: solid;
+  border-left-color: #ccc;
+  border-right-color: #ccc;
+  border-right-style: solid;
+  border-right-width: 1pt;
+  }
 
+.views-table {
+	border-left: 1pt
+
+}
 
 /* Home Page Latest Posts Block - Little Date Boxes */
 
