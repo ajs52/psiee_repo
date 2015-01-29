@@ -10,6 +10,23 @@ footer h2 {
 	margin-top: 15px;
 	}
 
+.researcherprojects {
+	font-size: 1.3em;
+	text-transform: uppercase;
+	line-height: 20pt;
+	margin: 0 0 20pt 0;
+	color: #fff;
+	background: #777;
+	border-radius: 0px 3px 3px 0px;
+	padding-left: 20pt;
+	margin-right: 30pt;
+}
+
+
+h4 {
+	color: #000;
+}
+
 
 /* Home Page padding between items like the map we aren't using */
 section.featured {
@@ -30,14 +47,32 @@ section.featured.map {
 	display: inline;
 }
 
+/*
 table {
 	margin-left: 10px;
 	border-left: 1pt;
 }
+*/
+
+
 td, th {
-	padding: 12px;
+	padding: 0px 12px 0px 12px;
 }
 
+.psuidlink {
+	padding-bottom: 0pt;
+
+}
+
+.views-field-field-psuid-entity {
+	float: left;
+}
+
+th.views-field-field-psuid-entity {
+	float: none;
+}
+
+/*
 tbody {
   border-top: 0px;
   border-left-width: 1pt;
@@ -47,11 +82,20 @@ tbody {
   border-right-style: solid;
   border-right-width: 1pt;
   }
+  */
 
+ tbody h2 {
+ 	display: none;
+ }
+
+ 
+
+/*
 .views-table {
 	border-left: 1pt
 
 }
+*/
 
 /* Home Page Latest Posts Block - Little Date Boxes */
 
@@ -82,6 +126,7 @@ border-color:#0088cc;
 .newsviewbox {
 	padding-right: 0px;
 	padding-bottom: 40px;
+	border-left: 0px;
 }
 
 .newsviewbox .col-first {
@@ -205,7 +250,7 @@ tbody {
 }
 
 .researchercontact {
-	margin: 0 10pt 15pt 0;
+	margin: 0 200pt 12pt 0;
 }
 
 .researchertheme {
@@ -215,6 +260,7 @@ tbody {
 	border-radius: 3px 3px 3px 3px;
 	float: center;
 	margin-bottom: 10pt;
+	margin-right: 400px;
 }
 
 .researchertags {
@@ -225,4 +271,9 @@ tbody {
 	float: center;
 	margin-bottom: 10pt;
 	color: #0088cc;
+	margin-right: 400px;
+}
+
+.researcherorgs {
+	margin-bottom: 25px;
 }
